@@ -53,6 +53,10 @@ If you always want to be up to date fetch the latest from GitHub in your `Gemfil
 gem 'pwa', github: 'jonhue/pwa'
 ```
 
+Now run the generator:
+
+    $ rails g pwa
+
 Lastly, go to your routes file (`config/routes.rb`) and mount the `Pwa::Engine` class:
 
 ```ruby
