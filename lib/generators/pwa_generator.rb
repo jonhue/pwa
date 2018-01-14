@@ -12,4 +12,8 @@ class PwaGenerator < Rails::Generators::Base
         template 'view.html.erb', 'app/views/pwa/offline/index.html.erb'
     end
 
+    def create_service_worker
+        template 'service_worker.js', 'public/pwa-sw.js'
+    end
+
 end

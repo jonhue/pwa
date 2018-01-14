@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
     gem.homepage              = 'https://github.com/jonhue/pwa'
     gem.license               = 'MIT'
 
-    gem.files                 = Dir['README.md', 'CHANGELOG.md', 'LICENSE', 'lib/**/*', 'app/**/*', 'config/**/*', 'vendor/**/*', 'public/**/*']
+    gem.files                 = Dir['README.md', 'CHANGELOG.md', 'LICENSE', 'lib/**/*', 'app/**/*', 'config/**/*', 'vendor/**/*']
     gem.require_paths         = ['lib']
 
     gem.post_install_message  = IO.read('INSTALL.md')
