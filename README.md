@@ -57,6 +57,12 @@ Now run the generator:
 
     $ rails g pwa
 
+Make sure to add the required javascript in `app/assets/javascripts/application.js`:
+
+```js
+//= require pwa
+```
+
 Lastly, go to your routes file (`config/routes.rb`) and mount the `Pwa::Engine` class:
 
 ```ruby
