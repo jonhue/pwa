@@ -15,7 +15,7 @@ This gem only provides the foundation you can build your Progressive Web App upo
 
 ---
 
-If a PWA is not enough and you want to bring your Web App into the store - check out [Native](https://github.com/NativeGap/native).
+If a PWA is not enough and you want to bring your Web App into the store - check out [Native](https://github.com/NativeGap/native-rails).
 
 ---
 
