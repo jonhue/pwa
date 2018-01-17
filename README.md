@@ -23,6 +23,8 @@ If a PWA is not enough and you want to bring your Web App into the store - check
 
 * [Installation](#installation)
 * [Usage](#usage)
+    * [Manifest](#manifest)
+    * [Service worker](#service-worker)
 * [To Do](#to-do)
 * [Contributing](#contributing)
     * [Contributors](#contributors)
@@ -75,7 +77,21 @@ mount Pwa::Engine, at: '/pwa'
 
 ## Usage
 
-...
+### Manifest
+
+The generator generates a `manifest.json` file located in the `public` directory. You can customize it to your liking.
+
+### Service worker
+
+The generator also generates a service worker which caches visited pages to the local storage so they can get accessed even if the device has no network connection.
+
+You can customize the page that shows up when a requested page has not been cached by editing the contents of `app/views/pwa/offline/index.html.erb`
+
+**Note:** When using Progressive Web Apps for Rails with a service worker provided by a third party service like OneSignal, remove the require statement from `app/assets/javascripts/application.js` and manually import your apps service worker in the third party script:
+
+```js
+importScripts('https://example.com/pwa-sw.js');
+```
 
 ---
 
