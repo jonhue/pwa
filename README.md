@@ -25,6 +25,7 @@ If a PWA is not enough and you want to bring your Web App into the store - check
 * [Usage](#usage)
     * [Manifest](#manifest)
     * [Service worker](#service-worker)
+    * [Views](#views)
 * [To Do](#to-do)
 * [Contributing](#contributing)
     * [Contributors](#contributors)
@@ -92,6 +93,18 @@ You can customize the page that shows up when a requested page has not been cach
 ```js
 importScripts('https://example.com/pwa-sw.js');
 ```
+
+### Views
+
+To detect whether or not your app is currently being used as a Progressive Web App, you can use CSS media queries:
+
+```css
+@media all and (display-mode: standalone) {
+    /* ... */
+}
+```
+
+**Note:** Make sure to use `fullscreen` instead of `standalone` if that is your PWA display mode.
 
 ---
 
