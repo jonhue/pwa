@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
     gem.version               = Pwa::VERSION
     gem.platform              = Gem::Platform::RUBY
     gem.summary               = 'Progressive Web Apps for Rails'
-    gem.description           = 'Progressive Web Apps for Rails.'
+    gem.description           = 'Progressive Web Apps for Rails'
     gem.authors               = 'Jonas Hübotter'
     gem.email                 = 'me@jonhue.me'
     gem.homepage              = 'https://github.com/jonhue/pwa'

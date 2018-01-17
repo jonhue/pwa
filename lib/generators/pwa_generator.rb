@@ -12,6 +12,10 @@ class PwaGenerator < Rails::Generators::Base
         template 'view.html.erb', 'app/views/pwa/offline/index.html.erb'
     end
 
+    def create_manifest
+        template 'manifest.json', 'public/manifest.json'
+    end
+
     def create_service_worker
         template 'service_worker.js', 'public/pwa-sw.js'
     end
