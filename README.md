@@ -59,11 +59,11 @@ gem 'pwa', github: 'jonhue/pwa'
 Now run the generator:
 
     $ rails g pwa
-    
+
 Add the following to the `head` tag of your layout file:
 
-```html
-<link rel="manifest" href="/manifest.json" />
+```haml
+= pwa_manifest
 ```
 
 Make sure to add the required javascript in `app/assets/javascripts/application.js`:
