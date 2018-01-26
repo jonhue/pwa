@@ -4,6 +4,11 @@
 
 * nothing yet
 
+### 2.0.1 - 2018/01/26
+
+* bugfixes
+    * fixed `wrong number of arguments` when defining apps without scopes
+
 ### 2.0.0 - 2018/01/26
 
 * features

@@ -17,7 +17,7 @@ module Pwa
             @apps = []
         end
 
-        def define_app name, scope
+        def define_app name, scope = nil
             self.apps << ::Pwa::App.new(name, scope)
         end
 
