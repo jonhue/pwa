@@ -4,6 +4,11 @@
 
 * nothing yet
 
+### 2.0.0 - 2018/01/26
+
+* features
+    * introduced `App` class to support multiple PWAs per Rails app
+
 ### 1.2.0 - 2018/01/19
 
 * features

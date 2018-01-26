@@ -4,7 +4,7 @@ module Pwa
         attr_accessor :name
         attr_accessor :scopes
 
-        def initialize name, scopes
+        def initialize name, scopes = nil
             @name = name
             @scopes = scopes
         end
@@ -18,7 +18,7 @@ module Pwa
         end
 
         def self.find_by_url url
-            Pwa.configuration.apps.select { |app| app.scopes.any? { |scope| url.include?(scope) } }
+            Pwa.configuration.apps.select { |app| app.scopes.nil? || app.scopes.any? { |scope| url.include?(scope) } }
         end
 
     end

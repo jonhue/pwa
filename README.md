@@ -71,6 +71,14 @@ Run the generators:
     $ rails g pwa:install
     $ rails g pwa:app -n "App"
 
+Noew define your app:
+
+```ruby
+Pwa.configure do |config|
+    config.define_app 'App'
+end
+```
+
 Add the following to the `head` tag of your layout file:
 
 ```haml
@@ -93,15 +101,24 @@ mount Pwa::Engine, at: ''
 
 ### Apps
 
-...
+Progressive Web Apps for Rails allows for multiple Progressive Web Apps per Rails app:
+
+```ruby
+Pwa.configure do |config|
+    config.define_app 'Example', ['example.com', 'localhost:3000', 'lvh.me:3000']
+    config.define_app 'Subdomain', ['subdomain.example.com', 'subdomain.lvh.me:3000']
+end
+```
+
+**Note:** You can omit the array of URL scopes if you have just one PWA.
 
 #### Manifest
 
-The generator generates a `manifest.json` file located in the `public` directory. You can customize it to your liking.
+The app generator generates a manifest file located in the `app/views/pwa/apps/manifests` directory. It is accessible through `/manifest.json`. You can customize it to your liking.
 
 #### Offline pages
 
-...
+Progressive Web Apps for Rails automatically stores a copy of the offline page (`app/views/pwa/apps/offline/_app.html.erb`) in the users cache, so your app is accessible at any time, even if requested URLs have not been cached yet.
 
 ### Service worker
 
