@@ -105,12 +105,14 @@ Progressive Web Apps for Rails allows for multiple Progressive Web Apps per Rail
 
 ```ruby
 Pwa.configure do |config|
-    config.define_app 'Example', ['example.com', 'localhost:3000', 'lvh.me:3000']
     config.define_app 'Subdomain', ['subdomain.example.com', 'subdomain.lvh.me:3000']
+    config.define_app 'Example', ['example.com', 'localhost:3000', 'lvh.me:3000']
 end
 ```
 
 **Note:** You can omit the array of URL scopes if you have just one PWA.
+
+When looking for an app, the first app specified with a matching scope will be used.
 
 #### Manifest
 
