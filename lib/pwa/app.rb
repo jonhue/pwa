@@ -18,7 +18,7 @@ module Pwa
         end
 
         def self.find_by_url url
-            Pwa.configuration.apps.select { |app| app.scopes.include?(url) }
+            Pwa.configuration.apps.select { |app| app.scopes.any? { |scope| url.include?(scope) } }
         end
 
     end
