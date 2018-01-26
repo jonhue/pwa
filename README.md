@@ -23,9 +23,13 @@ If a PWA is not enough and you want to bring your Web App into the store - check
 
 * [Installation](#installation)
 * [Usage](#usage)
-    * [Manifest](#manifest)
+    * [Quick start](#quick-start)
+    * [Apps](#apps)
+        * [Manifest](#manifest)
+        * [Offline pages](#offline-pages)
     * [Service worker](#service-worker)
     * [Views](#views)
+* [Configuration](#configuration)
 * [To Do](#to-do)
 * [Contributing](#contributing)
     * [Contributors](#contributors)
@@ -56,9 +60,16 @@ If you always want to be up to date fetch the latest from GitHub in your `Gemfil
 gem 'pwa', github: 'jonhue/pwa'
 ```
 
-Now run the generator:
+---
 
-    $ rails g pwa
+## Usage
+
+### Quick start
+
+Run the generators:
+
+    $ rails g pwa:install
+    $ rails g pwa:app -n "App"
 
 Add the following to the `head` tag of your layout file:
 
@@ -75,18 +86,22 @@ Make sure to add the required javascript in `app/assets/javascripts/application.
 Lastly, go to your routes file (`config/routes.rb`) and mount the `Pwa::Engine` class:
 
 ```ruby
-mount Pwa::Engine, at: '/pwa'
+mount Pwa::Engine, at: ''
 ```
 
-**Note:** The path `Pwa::Engine` gets mounted at, is currently required to be `pwa`.
+**Note:** The path `Pwa::Engine` is being mounted at, is currently required to be `''`.
 
----
+### Apps
 
-## Usage
+...
 
-### Manifest
+#### Manifest
 
 The generator generates a `manifest.json` file located in the `public` directory. You can customize it to your liking.
+
+#### Offline pages
+
+...
 
 ### Service worker
 
@@ -111,6 +126,20 @@ To detect whether or not your app is currently being used as a Progressive Web A
 ```
 
 **Note:** Make sure to use `fullscreen` instead of `standalone` if that is your PWA display mode.
+
+---
+
+## Configuration
+
+You can configure Pwa by passing a block to `configure`. This can be done in `config/initializers/pwa.rb`:
+
+```ruby
+Pwa.configure do |config|
+    config.define_app 'App', ['example.com']
+end
+```
+
+* `define_app` Define apps with a name and URL scopes.
 
 ---
 

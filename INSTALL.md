@@ -3,10 +3,10 @@
 
 There are two more steps to take:
 
-1) Run `rails g pwa`
+1) Run `rails g pwa:install` and `rails g pwa:install -n "Application Name"`
 2) Mount engine in `config/routes.rb`:
 
-    mount Pwa::Engine, at: '/pwa'
+    mount Pwa::Engine, at: ''
 
 
 Learn more at https://github.com/jonhue/pwa
