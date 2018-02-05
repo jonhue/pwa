@@ -91,6 +91,8 @@ Make sure to add the required javascript in `app/assets/javascripts/application.
 //= require pwa
 ```
 
+**Note:** If you are using Webpack instead of Sprockets, add and import the `pwa-rails` NPM package.
+
 Lastly, go to your routes file (`config/routes.rb`) and mount the `Pwa::Engine` class:
 
 ```ruby

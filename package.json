@@ -1,0 +1,10 @@
+{
+  "name": "pwa-rails",
+  "version": "1.0.0",
+  "description": "Progressive Web Apps for Rails",
+  "main": "vendor/assets/javascripts/pwa.js",
+  "repository": "https://github.com/jonhue/pwa",
+  "author": "Jonas Hübotter <me@jonhue.me>",
+  "license": "MIT",
+  "private": false
+}
