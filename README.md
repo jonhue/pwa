@@ -71,7 +71,7 @@ Run the generators:
     $ rails g pwa:install
     $ rails g pwa:app -n "App"
 
-Noew define your app:
+Now define your app:
 
 ```ruby
 Pwa.configure do |config|
