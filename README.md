@@ -27,6 +27,7 @@ If a PWA is not enough and you want to bring your Web App into the store - check
     * [Apps](#apps)
         * [Manifest](#manifest)
         * [Offline pages](#offline-pages)
+    * [Themes](#themes)
     * [Service worker](#service-worker)
     * [Views](#views)
 * [Configuration](#configuration)
@@ -82,7 +83,7 @@ end
 Add the following to the `head` tag of your layout file:
 
 ```haml
-= pwa_manifest
+= component 'pwa/manifest'
 ```
 
 Make sure to add the required javascript in `app/assets/javascripts/application.js`:
@@ -123,6 +124,22 @@ The app generator generates a manifest file located in the `app/views/pwa/apps/m
 #### Offline pages
 
 Progressive Web Apps for Rails automatically stores a copy of the offline page (`app/views/pwa/apps/offline/_app.html.erb`) in the users cache, so your app is accessible at any time, even if requested URLs have not been cached yet.
+
+### Themes
+
+Progressive Web Apps for Rails simplifies adding themes reflected in browsers to your site. Add the following to the `head` tag in your layout file:
+
+```haml
+= component 'pwa/theme', default: '#000000'
+```
+
+**Note:** `default` falls back to `#FFFFFF`.
+
+You can now override the default theme color from your views:
+
+```haml
+- area :pwa_theme, '#FF0000'
+```
 
 ### Service worker
 

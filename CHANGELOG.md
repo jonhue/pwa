@@ -4,6 +4,13 @@
 
 * nothing yet
 
+### 3.0.0 - 2018/02/10
+
+* features
+    * add theme support
+* enhancements
+    * use Mozaic for components
+
 ### 2.0.1 - 2018/01/26
 
 * bugfixes
