@@ -69,6 +69,7 @@ gem 'pwa', github: 'jonhue/pwa'
 
 Run the generators:
 
+    $ rails g mozaic:install
     $ rails g pwa:install
     $ rails g pwa:app -n "App"
 
