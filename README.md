@@ -11,7 +11,7 @@ This gem only provides the foundation you can build your Progressive Web App upo
 * **Fast** - Respond quickly to user interactions with silky smooth animations and no janky scrolling.
     * There are two technologies helping you with performance: *Turbolinks* & *AMP*. When you are using Turbolinks, use [TurbolinksAnimate](https://github.com/jonhue/turbolinks-animate) to get XHR requests + smooth page transitions that add some delight to using to your app. If you want to use AMP, take a look at [amp-html](https://github.com/jonhue/amp-html), an Accelerated Mobile Pages library for Rails apps.
 * **Engaging** - Feel like a natural app on the device, with an immersive user experience.
-    * When you think about making your app more engaging, you can't get around user-notifications. OneSignal is a powerful (& free) solution. With [devise-onseignal](https://github.com/jonhue/devise-onesignal) and [notification-pusher-onesignal](https://github.com/jonhue/notifications-rails/tree/master/notification-pusher/notification-pusher-onesignal) adding native notification capabilities to your app becomes dead simple.
+    * When you think about making your app more engaging, you can't get around user-notifications. OneSignal is a powerful (& free) solution. With [OnSignal](https://github.com/jonhue/onsignal) and [notification-pusher-onesignal](https://github.com/jonhue/notifications-rails/tree/master/notification-pusher/notification-pusher-onesignal) adding native notification capabilities to your app becomes dead simple.
 
 ---
 
