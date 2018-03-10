@@ -1,4 +1,5 @@
 require 'rails/railtie'
+require 'mozaic'
 
 module Pwa
     class Railtie < Rails::Railtie
