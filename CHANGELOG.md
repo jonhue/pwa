@@ -7,7 +7,7 @@
 ### 4.0.0 - 2018/03/27
 
 * features
-    * add theme support
+    * NPM package overhaul
 * bugfixes
     * fixed manifest URL in manifest component
 
