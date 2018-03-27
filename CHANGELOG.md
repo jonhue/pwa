@@ -4,6 +4,11 @@
 
 * nothing yet
 
+### 4.0.4 - 2018/03/27
+
+* bugfixes
+    * fixed manifest URL in manifest component
+
 ### 4.0.3 - 2018/03/27
 
 * bugfixes
