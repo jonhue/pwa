@@ -84,7 +84,7 @@ end
 Add the following to the `head` tag of your layout file:
 
 ```haml
-= component 'pwa/manifest'
+= component 'pwa/manifest', url: request.base_url
 ```
 
 Now add the `pwa-rails` NPM package and initialize it:
