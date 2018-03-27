@@ -15,7 +15,7 @@ This gem only provides the foundation you can build your Progressive Web App upo
 
 ---
 
-If a PWA is not enough and you want to bring your Web App into the store - check out [Native](https://github.com/NativeGap/native-rails).
+If a PWA is not enough and you want to bring your Web App into the store - check out [NativeGap](https://github.com/NativeGap/nativegap-rails).
 
 ---
 
@@ -29,7 +29,7 @@ If a PWA is not enough and you want to bring your Web App into the store - check
         * [Offline pages](#offline-pages)
     * [Themes](#themes)
     * [Service worker](#service-worker)
-    * [Views](#views)
+    * [Styles](#styles)
 * [Configuration](#configuration)
 * [To Do](#to-do)
 * [Contributing](#contributing)
@@ -87,13 +87,16 @@ Add the following to the `head` tag of your layout file:
 = component 'pwa/manifest'
 ```
 
-Make sure to add the required javascript in `app/assets/javascripts/application.js`:
+Now add the `pwa-rails` NPM package and initialize it:
 
 ```js
-//= require pwa
+import ProgressiveWebApp from 'pwa-rails';
+document.addEventListener( 'turbolinks:load', () => {
+    const progressiveWebApp = new ProgressiveWebApp();
+})
 ```
 
-**Note:** If you are using Webpack instead of Sprockets, add and import the `pwa-rails` NPM package.
+**Note:** If the name of the service worker is not the default `/pwa-sw.js` you can specify a custom path: `new ProgressiveWebApp('/custom-path.js')`
 
 Lastly, go to your routes file (`config/routes.rb`) and mount the `Pwa::Engine` class:
 
@@ -154,7 +157,7 @@ You can customize the page that shows up when a requested page has not been cach
 importScripts('https://example.com/pwa-sw.js');
 ```
 
-### Views
+### Styles
 
 To detect whether or not your app is currently being used as a Progressive Web App, you can use CSS media queries:
 

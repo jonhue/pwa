@@ -1,0 +1,12 @@
+.github
+app
+config
+lib
+.gitignore
+.travis.yml
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+DEPRECATIONS.md
+Gemfile
+pwa.gemspec
+Rakefile

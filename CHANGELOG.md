@@ -4,6 +4,13 @@
 
 * nothing yet
 
+### 4.0.0 - 2018/03/27
+
+* features
+    * add theme support
+* bugfixes
+    * fixed manifest URL in manifest component
+
 ### 3.0.0 - 2018/02/10
 
 * features

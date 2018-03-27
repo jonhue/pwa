@@ -12,7 +12,7 @@ module Pwa
         private
 
         def get_app
-            @app = ::Pwa::App.find_by_url(request.original_url)[0]
+            @app = Pwa::App.find_by_url(request.original_url).first
         end
 
     end

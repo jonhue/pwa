@@ -6,16 +6,14 @@ Gem::Specification.new do |gem|
     gem.version               = Pwa::VERSION
     gem.platform              = Gem::Platform::RUBY
     gem.summary               = 'Progressive Web Apps for Rails'
-    gem.description           = 'Progressive Web Apps for Rails'
+    gem.description           = 'Add a service worker and a manifest to your app, for it to be recognized as a PWA and accessed without a network connection.'
     gem.authors               = 'Jonas Hübotter'
     gem.email                 = 'me@jonhue.me'
-    gem.homepage              = 'https://github.com/jonhue/pwa'
+    gem.homepage              = 'https://jonhue.me/repos/progressive-web-apps-for-rails'
     gem.license               = 'MIT'
 
-    gem.files                 = Dir['README.md', 'CHANGELOG.md', 'LICENSE', 'lib/**/*', 'app/**/*', 'config/**/*', 'vendor/**/*']
+    gem.files                 = Dir['README.md', 'CHANGELOG.md', 'LICENSE', 'lib/**/*', 'app/**/*', 'config/**/*']
     gem.require_paths         = ['lib']
-
-    gem.post_install_message  = IO.read('INSTALL.md')
 
     gem.required_ruby_version = '>= 2.3'
 
