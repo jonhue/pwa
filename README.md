@@ -151,7 +151,7 @@ The generator also generates a service worker which caches visited pages to the 
 
 You can customize the page that shows up when a requested page has not been cached by editing the contents of `app/views/pwa/offline/index.html.erb`
 
-**Note:** When using Progressive Web Apps for Rails with a service worker provided by a third party service like OneSignal, remove the require statement from `app/assets/javascripts/application.js` and manually import your apps service worker in the third party script:
+**Note:** When using Progressive Web Apps for Rails with a service worker provided by a third party service like OneSignal, remove the NPM package and manually import your apps service worker in the third party script:
 
 ```js
 importScripts('https://example.com/pwa-sw.js');
