@@ -2,7 +2,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/pwa.svg)](https://badge.fury.io/rb/pwa) <img src="https://travis-ci.org/jonhue/pwa.svg?branch=master" />
 
-This gem only provides the foundation you can build your Progressive Web App upon. It simplifies adding a service worker and a manifest to your app, so it can be recognized as an PWA and be accessed without a network connection.
+This gem only provides a foundation upon which you can build your Progressive Web App. It simplifies adding a service worker and a manifest to your app, so that it can be recognized as an PWA and as such accessed without a network connection.
 
 [Google](https://developers.google.com/web/progressive-web-apps/) defines Progressive Web Apps as:
 
@@ -127,7 +127,7 @@ The app generator generates a manifest file located in the `app/views/pwa/apps/m
 
 #### Offline pages
 
-Progressive Web Apps for Rails automatically stores a copy of the offline page (`app/views/pwa/apps/offline/_app.html.erb`) in the users cache, so your app is accessible at any time, even if requested URLs have not been cached yet.
+Progressive Web Apps for Rails automatically stores a copy of the offline page (`app/views/pwa/apps/offline/_app.html.erb`) in the users cache, so your app is accessible at all times, even if requested URLs have not been cached yet.
 
 ### Themes
 
