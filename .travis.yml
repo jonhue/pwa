@@ -1,3 +1,9 @@
 language: ruby
 rvm:
-    - 2.3.3
+  - 2.3
+  - 2.4
+  - 2.5
+script:
+  - yarn run eslint
+  - bundle exec rubocop
+  - bundle exec rspec
