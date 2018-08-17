@@ -4,6 +4,7 @@ rvm:
   - 2.4
   - 2.5
 script:
+  - yarn install
   - yarn run eslint
   - bundle exec rubocop
   - bundle exec rspec
