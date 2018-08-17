@@ -1,19 +1,17 @@
+# frozen_string_literal: true
+
 module Pwa
-    class AppsController < ApplicationController
+  class AppsController < ApplicationController
+    before_action :set_app
 
-        before_action :get_app
+    def manifest; end
 
-        def manifest
-        end
+    def offline; end
 
-        def offline
-        end
+    private
 
-        private
-
-        def get_app
-            @app = Pwa::App.find_by_url(request.original_url).first
-        end
-
+    def set_app
+      @app = Pwa::App.find_by_url(request.original_url).first
     end
+  end
 end

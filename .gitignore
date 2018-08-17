@@ -1,8 +1,2 @@
-test/debug.log
-coverage
-rdoc
-memory
-*.gem
-.rvmrc
-Gemfile.lock
-log
+/node_modules
+/*.gem

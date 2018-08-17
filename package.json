@@ -2,10 +2,19 @@
   "name": "pwa-rails",
   "version": "4.0.3",
   "description": "Progressive Web Apps for Rails",
-  "main": "src/pwa-rails.js",
-  "repository": "https://github.com/jonhue/pwa",
+  "main": "src/index.js",
   "homepage": "https://jonhue.me/repos/progressive-web-apps-for-rails",
+  "bugs": {
+    "url": "https://github.com/jonhue/pwa/issues",
+    "email": "me@jonhue.me"
+  },
+  "repository": "https://github.com/jonhue/pwa",
   "author": "Jonas Hübotter <me@jonhue.me>",
   "license": "MIT",
-  "private": false
+  "scripts": {
+    "eslint": "eslint src/**/*.js lib/**/*.js"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0"
+  }
 }
