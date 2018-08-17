@@ -15,7 +15,6 @@
     "eslint": "eslint src/**/*.js lib/**/*.js"
   },
   "devDependencies": {
-    "eslint": "^5.2.0",
-    "node-sass": "^4.9.2"
+    "eslint": "^5.2.0"
   }
 }
