@@ -3,7 +3,7 @@ PATH
   specs:
     pwa (4.0.5)
       mozaic (~> 2.0)
-      railties (~> 6.0)
+      railties (>= 5.0)
 
 GEM
   remote: https://rubygems.org/
@@ -179,4 +179,4 @@ DEPENDENCIES
   rubocop-rspec
 
 BUNDLED WITH
-   1.16.2
+   1.17.3
