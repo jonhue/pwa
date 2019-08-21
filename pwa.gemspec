@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
                                   'app/**/*', 'config/**/*']
   gem.require_paths         = ['lib']
 
-  gem.required_ruby_version = '>= 2.3'
+  gem.required_ruby_version = '>= 2.4.4'
 
   gem.add_dependency 'mozaic', '~> 2.0'
   gem.add_dependency 'railties', '>= 5.0'
