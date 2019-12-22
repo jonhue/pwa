@@ -1,0 +1,52 @@
+name: CI
+
+on: [push]
+
+jobs:
+  ruby:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby:
+        - '2.5.x'
+        - '2.6.x'
+
+    name: Ruby ${{ matrix.ruby }}
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+    - name: Install dependencies
+      run: |
+        sudo apt-get install libsqlite3-dev
+        gem install bundler
+        bundle install --jobs 4 --retry 3
+    - name: Run RuboCop
+      run: bundle exec rubocop
+    - name: Run RSpec specs
+      run: bundle exec rspec
+
+  node:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node:
+        - '8.x'
+        - '10.x'
+        - '11.x'
+        - '12.x'
+        - '13.x'
+
+    name: Node ${{ matrix.node }}
+    steps:
+    - uses: actions/checkout@master
+    - uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node }}
+    - name: Install dependencies
+      run: yarn install
+    - name: Run ESLint
+      run: yarn eslint
