@@ -1,7 +1,5 @@
 # Progressive Web Apps for Rails
 
-[![Gem Version](https://badge.fury.io/rb/pwa.svg)](https://badge.fury.io/rb/pwa) <img src="https://travis-ci.org/jonhue/pwa.svg?branch=master" />
-
 This gem only provides a foundation upon which you can build your Progressive Web App. It simplifies adding a service worker and a manifest to your app, so that it can be recognized as an PWA and as such accessed without a network connection.
 
 [Google](https://developers.google.com/web/progressive-web-apps/) defines Progressive Web Apps as:
@@ -23,19 +21,17 @@ If a PWA is not enough and you want to bring your Web App into the store - check
 
 * [Installation](#installation)
 * [Usage](#usage)
-    * [Quick start](#quick-start)
-    * [Apps](#apps)
-        * [Manifest](#manifest)
-        * [Offline pages](#offline-pages)
-    * [Themes](#themes)
-    * [Service worker](#service-worker)
-    * [Styles](#styles)
+  * [Quick start](#quick-start)
+  * [Apps](#apps)
+    * [Manifest](#manifest)
+    * [Offline pages](#offline-pages)
+  * [Themes](#themes)
+  * [Service worker](#service-worker)
+  * [Styles](#styles)
 * [Configuration](#configuration)
-* [To Do](#to-do)
+* [Release](#release)
 * [Contributing](#contributing)
-    * [Contributors](#contributors)
-    * [Semantic versioning](#semantic-versioning)
-* [License](#license)
+  * [Semantic versioning](#semantic-versioning)
 
 ---
 
@@ -77,7 +73,7 @@ Now define your app:
 
 ```ruby
 Pwa.configure do |config|
-    config.define_app 'App'
+  config.define_app 'App'
 end
 ```
 
@@ -91,8 +87,8 @@ Now add the `pwa-rails` NPM package and initialize it:
 
 ```js
 import ProgressiveWebApp from 'pwa-rails';
-document.addEventListener( 'turbolinks:load', () => {
-    const progressiveWebApp = new ProgressiveWebApp();
+document.addEventListener('turbolinks:load', () => {
+  const progressiveWebApp = new ProgressiveWebApp();
 })
 ```
 
@@ -112,8 +108,8 @@ Progressive Web Apps for Rails allows for multiple Progressive Web Apps per Rail
 
 ```ruby
 Pwa.configure do |config|
-    config.define_app 'Subdomain', ['subdomain.example.com', 'subdomain.lvh.me:3000']
-    config.define_app 'Example', ['example.com', 'localhost:3000', 'lvh.me:3000']
+  config.define_app 'Subdomain', ['subdomain.example.com', 'subdomain.lvh.me:3000']
+  config.define_app 'Example', ['example.com', 'localhost:3000', 'lvh.me:3000']
 end
 ```
 
@@ -163,7 +159,7 @@ To detect whether or not your app is currently being used as a Progressive Web A
 
 ```css
 @media all and (display-mode: standalone) {
-    /* ... */
+  /* ... */
 }
 ```
 
@@ -177,7 +173,7 @@ You can configure Pwa by passing a block to `configure`. This can be done in `co
 
 ```ruby
 Pwa.configure do |config|
-    config.define_app 'App', ['example.com']
+  config.define_app 'App', ['example.com']
 end
 ```
 
@@ -185,11 +181,14 @@ end
 
 ---
 
-## To Do
+## Release
 
-[Here](https://github.com/jonhue/pwa/projects/1) is the full list of current projects.
-
-To propose your ideas, initiate the discussion by adding a [new issue](https://github.com/jonhue/pwa/issues/new).
+1. Review breaking changes and deprecations in `CHANGELOG.md`.
+1. Change the version in `package.json` and `lib/pwa/version.rb`.
+1. Reset `CHANGELOG.md`.
+1. Create a pull request to merge the changes into `master`.
+1. After the pull request was merged, create a new release listing the breaking changes and commits on `master` since the last release.
+1. The release workflow will publish the node package to NPM and GPR and the gem to Rubygems and GPR.
 
 ---
 
@@ -199,36 +198,6 @@ We hope that you will consider contributing to Progressive Web Apps for Rails. P
 
 [Learn more about contributing to this repository](CONTRIBUTING.md), [Code of Conduct](CODE_OF_CONDUCT.md)
 
-### Contributors
-
-Give the people some :heart: who are working on this project. See them all at:
-
-https://github.com/jonhue/pwa/graphs/contributors
-
 ### Semantic Versioning
 
 Progressive Web Apps for Rails follows Semantic Versioning 2.0 as defined at http://semver.org.
-
-## License
-
-MIT License
-
-Copyright (c) 2018 Jonas Hübotter
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
