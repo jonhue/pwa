@@ -11,6 +11,9 @@
   "repository": "https://github.com/jonhue/pwa",
   "author": "Jonas Hübotter <me@jonhue.me>",
   "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "eslint": "eslint src/**/*.js lib/**/*.js"
   },
