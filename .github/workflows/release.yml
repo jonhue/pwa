@@ -38,19 +38,19 @@ jobs:
       env:
         GEM_HOST_API_KEY: ${{secrets.RUBYGEMS_AUTH_TOKEN}}
 
-  node-publish-gpr:
-    runs-on: ubuntu-latest
-    name: GPR
-    steps:
-    - uses: actions/checkout@master
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 13
-        registry-url: https://npm.pkg.github.com/
-        scope: '@jonhue'
-    - run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GPR_AUTH_TOKEN }}
+  # node-publish-gpr:
+  #   runs-on: ubuntu-latest
+  #   name: GPR
+  #   steps:
+  #   - uses: actions/checkout@master
+  #   - uses: actions/setup-node@v1
+  #     with:
+  #       node-version: 13
+  #       registry-url: https://npm.pkg.github.com/
+  #       scope: '@jonhue'
+  #   - run: npm publish
+  #     env:
+  #       NODE_AUTH_TOKEN: ${{ secrets.GPR_AUTH_TOKEN }}
 
   node-publish-npm:
     runs-on: ubuntu-latest
