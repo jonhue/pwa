@@ -12,12 +12,12 @@
   "author": "Jonas Hübotter <me@jonhue.me>",
   "license": "MIT",
   "engines": {
-    "node": "8 || >=10"
+    "node": "10 || >=12"
   },
   "scripts": {
     "eslint": "eslint src/**/*.js lib/**/*.js"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.0.0"
   }
 }
