@@ -18,6 +18,6 @@
     "eslint": "eslint src/**/*.js lib/**/*.js"
   },
   "devDependencies": {
-    "eslint": "^7.4.0"
+    "eslint": "^7.5.0"
   }
 }
